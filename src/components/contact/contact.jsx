@@ -1,5 +1,6 @@
+import emailjs from '@emailjs/browser';
 import { motion, useInView } from "framer-motion";
-import { React, useRef } from 'react';
+import { React, useRef, useState } from 'react';
 import "./contact.scss";
 
 const variants ={
@@ -20,9 +21,24 @@ const variants ={
 
 const contact = () => {
 
-    const ref = useRef()
+    const ref = useRef();
+    const formRef = useRef()
+    const [error,setError] = useState(false);
+    const [success,setSuccess] = useState(false);
 
     const isInView = useInView(ref, {margin: "-100px"})
+
+    const sendEmail = (e) => {
+        e.preventDefault();
+    
+        emailjs.sendForm('service_exli72l', 'template_989t3jl', formRef.current, '8uwcH_Dh67XpB5bhb')
+          .then((result) => {
+              setSuccess(true);
+          }, (error) => {
+            setError(true);
+          });
+      };
+
   return (
     <motion.div className='contact' variants={variants} initial="initial" whileInView="animate" >
         <motion.div className='textContainer' variants={variants} >
@@ -37,7 +53,7 @@ const contact = () => {
         </motion.div>
         <motion.div className="item" variants={variants} >
             <h2>Phone</h2>
-            <span>+234 8166269314</span>
+            <span>+234 9042930781</span>
         </motion.div>
         </motion.div>
         <div className='formContainer' >
@@ -118,16 +134,20 @@ trasition={{duration:1}}
 </svg>
             </motion.div>
             <motion.form 
+            onSubmit={sendEmail}
+            ref={formRef}
             initial={{opacity:0}} whileInView={{opacity:1}} transition={{delay:4, duration:1}}
             >
-                <input type="text" required placeholder='Name'/>
-                <input type="email" aria-required placeholder='Email'/>
-                <textarea rows={8} placeholder='Message'/>
+                <input type="text" required placeholder='Name' name="name"/>
+                <input type="email" required placeholder='Email' name="email"/>
+                <textarea rows={8} placeholder='Message' name="message"/>
                 <button>Submit</button>
+                {error && "Error"}
+                {success && "Success"}
             </motion.form>
         </div>
     </motion.div>
   )
-}
+} 
 
 export default contact
