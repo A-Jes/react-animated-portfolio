@@ -19,7 +19,7 @@ const variants ={
 };
 
 
-const contact = () => {
+const Contact = () => {
 
     const ref = useRef();
     const formRef = useRef()
@@ -150,4 +150,4 @@ trasition={{duration:1}}
   )
 } 
 
-export default contact
+export default Contact
