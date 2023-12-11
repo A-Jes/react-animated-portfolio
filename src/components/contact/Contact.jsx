@@ -150,4 +150,4 @@ trasition={{duration:1}}
   )
 } 
 
-export default Contact
+export default Contact;
