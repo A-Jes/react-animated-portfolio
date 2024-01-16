@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+      - "releases/**"
 
 jobs:
   build:
@@ -11,6 +12,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Clear Node.js cache
+        run: |
+          npm cache clean --force
+
       - name: Checkout code
         uses: actions/checkout@v2
 
