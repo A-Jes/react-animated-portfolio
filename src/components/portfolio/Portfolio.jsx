@@ -7,17 +7,17 @@ import "./portfolio.scss";
 const items = [
     {
         id:1,
-        title:"Meme-Generator",
-        img:"./meme.png",
-        desc: "This application generates meme randomly getting data from an API, and user can interact with it by inputting a text that displays on the meme generated. Tecchnology used is React Js",
-        link: "https://a-jes.github.io/Meme-Generator/"
-    },
-    {
-        id:2,
         title:"GPT-3",
         img:"./gpt3.png",
         desc: "This application an AI landing page interface with morden look and feel. Tecchnology used is React Js",
         link: "https://gpt-react-sand.vercel.app/"
+    },
+    {
+        id:2,
+        title:"Meme-Generator",
+        img:"./meme.png",
+        desc: "This application generates meme randomly getting data from an API, and user can interact with it by inputting a text that displays on the meme generated. Tecchnology used is React Js",
+        link: "https://a-jes.github.io/Meme-Generator/"
     },
     {
         id:3,
