@@ -14,13 +14,20 @@ const items = [
     },
     {
         id:2,
+        title:"GPT-3",
+        img:"./gpt3.png",
+        desc: "This application an AI landing page interface with morden look and feel. Tecchnology used is React Js",
+        link: "https://gpt-react-sand.vercel.app/"
+    },
+    {
+        id:3,
         title:"Recipes Website",
         img:"./recipe.png",
         desc: "This is a search engine to get global recipes with instructions, using bootstrap Framework and JavaScript",
         link: "https://a-jes.github.io/Recipes/"
     },
     {
-        id:3,
+        id:4,
         title:"Journal",
         img:"./journal.png",
         desc: "This project diplays image, location and description of places travelled, using reusable React component",
