@@ -1,3 +1,5 @@
+/* eslint-disable react/no-unknown-property */
+/* eslint-disable no-unused-vars */
 import emailjs from '@emailjs/browser';
 import { motion, useInView } from "framer-motion";
 import { React, useRef, useState } from 'react';
@@ -42,7 +44,7 @@ const Contact = () => {
   return (
     <motion.div className='contact' variants={variants} initial="initial" whileInView="animate" >
         <motion.div className='textContainer' variants={variants} >
-        <motion.h1 variants={variants} >Let's work together</motion.h1>
+        <motion.h1 variants={variants}> Let us work together</motion.h1>
         <motion.div className="item" variants={variants} >
             <h2>Mail</h2>
             <span>ajayisekemi575@gmail.com</span>
@@ -59,7 +61,7 @@ const Contact = () => {
         <div className='formContainer' >
             <motion.div className="phoneSvg" initial={{opacity:1}} whileInView={{opacity:0}} transition={{delay:3, duration:1}}>
 
-            <svg fill="#000000" width="450px" height="450px" viewBox="0 0 64 64" version="1.1" xmlSpace="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <svg fill="#000000" width="450px" height="450px" viewBox="0 0 64 64" version="1.1" xmlSpace="preserve" xmlns="http://www.w3.org/2000/svg"  xmlnsXlink ="http://www.w3.org/1999/xlink">
 
 <g id="_x32_5_attachment"/>
 

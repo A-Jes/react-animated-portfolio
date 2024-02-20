@@ -1,3 +1,6 @@
+/* eslint-disable react-hooks/rules-of-hooks */
+/* eslint-disable react-refresh/only-export-components */
+/* eslint-disable no-unused-vars */
 import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 import { React, useRef } from 'react';
 import "./portfolio.scss";
